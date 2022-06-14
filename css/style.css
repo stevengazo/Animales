@@ -1,113 +1,172 @@
 body {
   background: #abebc6;
 }
+/*Grid para el acomodo en dos columnas de la info del jugador y el juego*/
+.grid-layout{
+  display: grid;  
+  grid-template-columns: auto 1fr;  /*seteo de dos columna, la primera con tamaño automatico, la segunda una fracción*/
 
-.cuadrado {
-  height: 380px;
-  background: #f2f4f4;
-  width: 500px;
-  position: fixed;
-  right: 550px;
-  top: 110px;
+  /* Borde de referencia => Quitar propiedad en version final*/
+  border: 1px solid red;
 }
 
-.b1 {
+/*Clase para el contener de los elementos del jugador*/
+.user-info-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  /* Borde de referencia => Quitar propiedad en version final*/
+  border: 1px solid red;
+}
+
+/* Clase para contener los elementos del juego*/
+.game-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* Borde de referencia => Quitar propiedad en version final*/
+  border: 1px solid red;
+}
+
+/*Clase para los elementos de la imagen (cuadro trasero e imagen)*/
+.img-container{
+  height: 380px;
+  width: 500px; 
+  position: relative;  
+  /* Borde de referencia => Quitar propiedad en version final*/
+  border: 1px solid red;
+}
+
+/*Clase para el acomodo de la imagen*/
+.img-animal{
+  position: absolute;
+  height: 340px;
+  width: 460px;  
+  margin-top: 1rem;
+  margin-left:1rem ;
+  /* Borde de referencia => Quitar propiedad en version final*/
+  border: 1px solid red;  
+  z-index: 2;                   /*Para ponerlo una posición encima (2) del cuadro)*/
+}
+
+/*Cuadrado de atras de la imagen*/
+.cuadrado {
+  position: absolute;
+  height: 380px;
+  width: 500px; 
+  background: #f2f4f4;  
+   z-index: 1;                    /*Para ponerlo una posición detras (1) de la imagen*/
+  /* Borde de referencia => Quitar propiedad en version final*/
+  border: 1px solid red;
+}
+
+
+/* Clase para configurar el div contenedor de los botones de opciones*/
+.buttons-container{
+  margin-top: 2rem;
+  display: grid;                    /* Grilla para acomodar los botones tipo "tabla"*/
+  grid-template-columns: auto auto; /*¨Propiedad para generar 2 columnas de tamaño automatico*/
+  grid-template-rows: auto auto;    /*¨Propiedad para generar 2 filas de tamaño automatico*/
+  gap: 10px;                        /*Se paración entre los elementos*/
+  /* Borde de referencia => Quitar propiedad en version final*/
+  border: 1px solid red;
+}
+
+
+/* Clase generar para los botones de opciones*/
+.button{
   height: 50px;
   width: 222px;
-  font-size: 1.2rem;
-  position: fixed;
-  right: 830px;
-  top: 520px;
+  font-size: 1.2rem;  
   font-family: "Cooper Black";
   border-radius: 5px;
   color: #fff;
+}
+
+
+/*Clases para los colores de cada boton*/
+.b1 {
   border-color: #5499c7;
   background: #5499c7;
 }
 
-.b2 {
-  height: 50px;
-  width: 222px;
-  font-size: 1.2rem;
-  position: fixed;
-  right: 550px;
-  top: 520px;
-  font-family: "Cooper Black";
-  border-radius: 5px;
-  color: #fff;
+.b2 {  
   border-color: #e74c3c;
   background: #e74c3c;
 }
 
 .b3 {
-  height: 50px;
-  width: 222px;
-  font-size: 1.2rem;
-  position: fixed;
-  right: 830px;
-  top: 580px;
-  font-family: "Cooper Black";
-  border-radius: 5px;
-  color: #fff;
   border-color: #f4d03f;
   background: #f4d03f;
 }
 
-.b4 {
-  height: 50px;
-  width: 222px;
-  font-size: 1.2rem;
-  position: fixed;
-  right: 550px;
-  top: 580px;
-  font-family: "Cooper Black";
-  border-radius: 5px;
-  color: #fff;
+.b4 {  
   border-color: #2ecc71;
   background: #2ecc71;
 }
 
 .text {
   font-size: 45px;
-  font-family: "Cooper Black";
-  position: fixed;
-  right: 700px;
-  top: 42px;
+  font-family: "Cooper Black";  
   color: #fdfefe;
 }
 
 h4 {
   font-size: 20px;
   font-family: "Cooper Black";
-  color: #fdfefe;
-  position: fixed;
-  top: 90px;
+  color: #fdfefe;  
 }
 
-.perro {
-  height: 340px;
-  width: 460px;
+/* Clase general para los cuadros de dialogos*/
+.dialog{
   position: fixed;
-  right: 570px;
-  top: 130px;
+  width:240px;
+  height: 120px;
+  left: 50%;
+  top: 40%;    
+  z-index: 3;       /*Acomodo en una posición superior de los otros elementos (para que muestre al frente)*/
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+
+  /* Borde de referencia => Quitar propiedad en version final*/
+  border: 1px solid red;
 }
 
-.puntos {
-  position: fixed;
-  left: 146px;
-  top: 130px;
+/* Clase especifica para el div de exito*/
+.success{
+  background-color: #2ecc71;
+  opacity: 80%;  
+  display: none;      /*quitar la propiedad display:none; y mostrará el cuadro*/
+}
+/* Clase especifica para el div de error*/
+.error{
+  display: none;    /*quitar la propiedad display:none; y mostrará el cuadro*/
+  background-color: red;
+  opacity: 80%;
 }
 
-#puntos {
-  top: 105px;
-  left: 45px;
-}
-.nombre {
-  position: fixed;
-  left: 146px;
-  top: 90px;
+.btn-continue{
+  background-color: whitesmoke;
+  width: 80px;
+  height: 20px;
+  border-radius: 10px;
+  border: none;
 }
 
-#nombre {
-  top: 62px;
+/* Es igual a .btn-continue el :hover es como un focus, para que pasen ciertas acciones sobre el elemento*/
+.btn-continue:hover{
+  border: 1px solid white;
+  background-color: #abebc6;
+}
+
+.error-title{
+  color: white;
 }
