@@ -17,13 +17,16 @@
       <input type="text" class="nombre" value="">
       <h4 id="puntos">Points: </h4>
       <input type="number" class="puntos" value="" readonly>
+
+      <button onclick="smpl()" class="btn-continue"> Prueba </button>
+
     </div>
     <!-- Div para contener los elementos del juego-->
     <div class="game-container">
       <div class="text">What is?</div>
       <!-- Div para contener la imagen y el cuadro de atras-->
-      <div class="img-container">  
-        <img src="images/dog.jpg" class="img-animal">
+      <div id="imgContainer" class="img-container">  
+        <img id="img" src="images/dog.jpg" class="img-animal">        
         <div class="cuadrado"></div>
       </div>
       <!-- Div para contener los datos-->
@@ -35,6 +38,9 @@
       </div>
     </div>
   </div>
+  <div id="test">
+
+  </div>
 
   <!-- Divs para contener los elementos que son "ventanas emergentes" de error y de verificación-->
   <div id="message-success" class="dialog success">
@@ -44,7 +50,7 @@
       The name is ....
     </h5>    
     <button id="continue" class="btn-continue">
-      Continuerrore
+      Continue
     </button>
   </div>
   <div id="message-error" class="dialog error">
@@ -57,7 +63,7 @@
     </button>
   </div>
 
-  <script src="/js/index.js" ></script> 
+  <script src="./js/index.js" ></script> 
 </body>
 
 </html>
