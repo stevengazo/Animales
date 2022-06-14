@@ -1,113 +1,113 @@
-body{
-  background:#ABEBC6;
+body {
+  background: #abebc6;
 }
 
-.cuadrado{
-height:380px;
-background:#F2F4F4;
-width: 500px;
-position: fixed;
-right: 550px;
-top: 110px;
+.cuadrado {
+  height: 380px;
+  background: #f2f4f4;
+  width: 500px;
+  position: fixed;
+  right: 550px;
+  top: 110px;
 }
 
-.b1{
-height: 50px;
-width: 222px;
-font-size: 1.2rem;
-position: fixed;
-right: 830px;
-top: 520px;
-font-family: 'Cooper Black';
-border-radius: 5px;
-color: #fff;
-border-color: #5499C7;
-background: #5499C7;
+.b1 {
+  height: 50px;
+  width: 222px;
+  font-size: 1.2rem;
+  position: fixed;
+  right: 830px;
+  top: 520px;
+  font-family: "Cooper Black";
+  border-radius: 5px;
+  color: #fff;
+  border-color: #5499c7;
+  background: #5499c7;
 }
 
-.b2{
-height: 50px;
-width: 222px;
-font-size: 1.2rem;
-position: fixed;
-right: 550px;
-top: 520px;
-font-family: 'Cooper Black';
-border-radius: 5px;
-color: #fff;
-border-color: #E74C3C;
-background: #E74C3C;
+.b2 {
+  height: 50px;
+  width: 222px;
+  font-size: 1.2rem;
+  position: fixed;
+  right: 550px;
+  top: 520px;
+  font-family: "Cooper Black";
+  border-radius: 5px;
+  color: #fff;
+  border-color: #e74c3c;
+  background: #e74c3c;
 }
 
-.b3{
-height: 50px;
-width: 222px;
-font-size: 1.2rem;
-position: fixed;
-right: 830px;
-top: 580px;
-font-family: 'Cooper Black';
-border-radius: 5px;
-color: #fff;
-border-color: #F4D03F;
-background: #F4D03F
+.b3 {
+  height: 50px;
+  width: 222px;
+  font-size: 1.2rem;
+  position: fixed;
+  right: 830px;
+  top: 580px;
+  font-family: "Cooper Black";
+  border-radius: 5px;
+  color: #fff;
+  border-color: #f4d03f;
+  background: #f4d03f;
 }
 
-.b4{
-height: 50px;
-width: 222px;
-font-size: 1.2rem;
-position: fixed;
-right: 550px;
-top: 580px;
-font-family: 'Cooper Black';
-border-radius: 5px;
-color: #fff;
-border-color: #2ECC71;
-background:#2ECC71
+.b4 {
+  height: 50px;
+  width: 222px;
+  font-size: 1.2rem;
+  position: fixed;
+  right: 550px;
+  top: 580px;
+  font-family: "Cooper Black";
+  border-radius: 5px;
+  color: #fff;
+  border-color: #2ecc71;
+  background: #2ecc71;
 }
 
-.text{
-font-size: 45px;
-font-family: 'Cooper Black';
-position: fixed;
-right: 700px;
-top: 42px;
-color: #FDFEFE;
+.text {
+  font-size: 45px;
+  font-family: "Cooper Black";
+  position: fixed;
+  right: 700px;
+  top: 42px;
+  color: #fdfefe;
 }
 
-h4{
-font-size: 20px;
-font-family: 'Cooper Black';
-color: #FDFEFE;
-position: fixed;
-top: 90px;
+h4 {
+  font-size: 20px;
+  font-family: "Cooper Black";
+  color: #fdfefe;
+  position: fixed;
+  top: 90px;
 }
 
-.perro{
-height:340px;
-width: 460px;
-position: fixed;
-right: 570px;
-top: 130px;
+.perro {
+  height: 340px;
+  width: 460px;
+  position: fixed;
+  right: 570px;
+  top: 130px;
 }
 
-.puntos{
-position: fixed;
-left: 146px;
-top: 130px;
+.puntos {
+  position: fixed;
+  left: 146px;
+  top: 130px;
 }
 
-#puntos{
-top: 105px;
-left: 45px;
+#puntos {
+  top: 105px;
+  left: 45px;
 }
-.nombre{
-position: fixed;
-left: 146px;
-top: 90px;
+.nombre {
+  position: fixed;
+  left: 146px;
+  top: 90px;
 }
 
-#nombre{
-top: 62px;
+#nombre {
+  top: 62px;
 }
