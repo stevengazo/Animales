@@ -122,7 +122,7 @@ h4 {
   height: 120px;
   left: 50%;
   top: 40%;    
-  z-index: 3;       /*Acomodo en una posición superior de los otros elementos (para que muestre al frente)*/
+  z-index: 5;       /*Acomodo en una posición superior de los otros elementos (para que muestre al frente)*/
 
   display: flex;
   flex-direction: column;

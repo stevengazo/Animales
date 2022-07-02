@@ -16,9 +16,9 @@
       <h4 id="nombre">Player Name:</h4>
       <input type="text" class="nombre" value="">
       <h4 id="puntos">Points: </h4>
-      <input type="number" class="puntos" value="" readonly>
+      <input id="PlayerPoints" type="number" class="puntos" value="0" readonly>
 
-      <button onclick="onclickSample()" class="btn-continue"> Prueba </button>
+      <button onclick="RenderizarIMG()" class="btn-continue"> Prueba </button>
       <button onclick="cleanIMG()" class="btn-continue"> borrar IMG </button>
 
     </div>
@@ -26,16 +26,15 @@
     <div class="game-container">
       <div class="text">What is?</div>
       <!-- Div para contener la imagen y el cuadro de atras-->
-      <div id="imgContainer" class="img-container">  
-        <img id="img" src="images/dog.jpg" class="img-animal">        
+      <div id="imgContainer" class="img-container">         
         <div class="cuadrado"></div>
       </div>
       <!-- Div para contener los datos-->
       <div class="buttons-container">
-        <input type="button" class="button b1" value="Dog">
-        <input type="button" class="button b2" value="Cat">
-        <input type="button" class="button b3" value="Pig">
-        <input type="button" class="button b4" value="Horse">
+        <buttons id="button-1" onclick="validarNombre(this)" class="button b1" >s</buttons>
+        <buttons id="button-2" onclick="validarNombre(this)" class="button b2"  >a</buttons>
+        <buttons id="button-3" onclick="validarNombre(this)" class="button b3" >a</buttons>
+        <buttons id="button-4" onclick="validarNombre(this)" class="button b4"  >a</buttons>
       </div>
     </div>
   </div>
@@ -50,16 +49,14 @@
       <br>
       The name is ....
     </h5>    
-    <button id="continue" class="btn-continue">
+    <button id="continue" onclick="btnContinue()" class="btn-continue">
       Continue
     </button>
   </div>
-  <div id="message-error" class="dialog error">
-    <h5 class="error-title">
-      Error!
-      The name is ....
+  <div id="message-error"  class="dialog error">
+    <h5 id="error-title" class="error-title">
     </h5>    
-    <button id="continue" class="btn-continue">
+    <button id="continue" onclick="btnContinue()" class="btn-continue">
       Continue
     </button>
   </div>
