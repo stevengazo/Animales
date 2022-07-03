@@ -77,6 +77,12 @@ function getNameOfAnimal(animalImage) {
 */
 function validarNombre(boton) {
   const nombreAnimal = boton.innerText;
+
+  button1.style.pointerEvents= "none";
+  button2.style.pointerEvents= "none";
+  button3.style.pointerEvents= "none";
+  button4.style.pointerEvents= "none";
+
   if (nombreAnimal === NombreImagenSeleccionada) {  
     player.points++;
     // muestra el cuadro de exito
@@ -126,6 +132,14 @@ function GenerarNombresBotones(nombreCorrecto) {
   }
 }
 
+const initPlay = ()=>{
+    document.getElementById("gameContainer").style.display="flex";
+    player.name = document.getElementById("playerName").value;
+    document.getElementById("titleUser").innerText = `Hello ${player.name} \n What is this?`;
+    RenderizarIMG();
+
+}
+
 
 function RenderizarIMG() {
   var img = arrayOfimages[counter];
@@ -140,23 +154,36 @@ function RenderizarIMG() {
   
 }
 
+function noneFunction (){
+
+}
+
 
 function btnContinue(){
   cleanIMG();
   //cleanIMG();
   divFelicitaciones.style.display = "none";
   divError.style.display = "none";
+
+  button1.style.pointerEvents= "auto";
+  button2.style.pointerEvents= "auto";
+  button3.style.pointerEvents= "auto";
+  button4.style.pointerEvents= "auto";
+
+
   RenderizarIMG();
+
+
+
 }
 
 // Borra las imagenes del sitio
 function cleanIMG() {
   // Prueba remover elemeto
-  debugger;
   const list = document.getElementsByTagName("img");
   for (let index = 0; index < list.length; index++) {
     imgContainer.removeChild(list[index]);
-    debugger;
   }
-  debugger;
 }
+
+initPlay();

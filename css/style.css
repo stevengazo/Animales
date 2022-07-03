@@ -21,15 +21,24 @@ body {
  
 }
 
+.input-Datas{
+  text-align: center;
+  
+}
+
 /* Clase para contener los elementos del juego*/
 .game-container{
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 
 }
 
+
+.title-User{
+  margin: 0px;
+}
 /*Clase para los elementos de la imagen (cuadro trasero e imagen)*/
 .img-container{
   height: 380px;
@@ -66,7 +75,8 @@ body {
   display: grid;                    /* Grilla para acomodar los botones tipo "tabla"*/
   grid-template-columns: auto auto; /*¨Propiedad para generar 2 columnas de tamaño automatico*/
   grid-template-rows: auto auto;    /*¨Propiedad para generar 2 filas de tamaño automatico*/
-  gap: 10px;                        /*Se paración entre los elementos*/
+  gap: 10px;      
+                /*Se paración entre los elementos*/
  
 }
 
@@ -79,6 +89,9 @@ body {
   font-family: "Cooper Black";
   border-radius: 5px;
   color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -118,27 +131,25 @@ h4 {
 /* Clase general para los cuadros de dialogos*/
 .dialog{
   position: fixed;
-  width:240px;
-  height: 120px;
+  width: 14rem;
+  height:  8rem;
   left: 50%;
   top: 40%;    
-  z-index: 5;       /*Acomodo en una posición superior de los otros elementos (para que muestre al frente)*/
+  z-index: 6!important;       /*Acomodo en una posición superior de los otros elementos (para que muestre al frente)*/
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
-
-  /* Borde de referencia => Quitar propiedad en version final*/
-  border: 1px solid red;
 }
 
 /* Clase especifica para el div de exito*/
 .success{
-  background-color: #2ecc71;
+  background-color: #2ecc71;  
   opacity: 80%;  
-  display: none;      /*quitar la propiedad display:none; y mostrará el cuadro*/
+  z-index: 6;
+  display:none;     /*quitar la propiedad display:none; y mostrará el cuadro*/
 }
 /* Clase especifica para el div de error*/
 .error{
