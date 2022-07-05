@@ -24,19 +24,19 @@
     </div>
     <!-- Div para contener los elementos del juego-->
     <div id="gameContainer" class="game-container">
-      <div  class="text">
-        <h6 class="title-User" id="titleUser"></h6>        
+      <div class="text">
+        <h6 class="title-User" id="titleUser"></h6>
       </div>
       <!-- Div para contener la imagen y el cuadro de atras-->
-      <div id="imgContainer" class="img-container">         
+      <div id="imgContainer" class="img-container">
         <div class="cuadrado"></div>
       </div>
       <!-- Div para contener los datos-->
       <div class="buttons-container">
-        <buttons id="button-1" onclick="validarNombre(this)" class="button b1" >s</buttons>
-        <buttons id="button-2" onclick="validarNombre(this)" class="button b2"  >a</buttons>
-        <buttons id="button-3" onclick="validarNombre(this)" class="button b3" >a</buttons>
-        <buttons id="button-4" onclick="validarNombre(this)" class="button b4"  >a</buttons>
+        <buttons id="button-1" onclick="validarNombre(this)" class="button b1">s</buttons>
+        <buttons id="button-2" onclick="validarNombre(this)" class="button b2">a</buttons>
+        <buttons id="button-3" onclick="validarNombre(this)" class="button b3">a</buttons>
+        <buttons id="button-4" onclick="validarNombre(this)" class="button b4">a</buttons>
       </div>
     </div>
   </div>
@@ -46,24 +46,25 @@
 
   <!-- Divs para contener los elementos que son "ventanas emergentes" de error y de verificación-->
   <div id="message-success" class="dialog success">
-    <h5>
-      Congratulations
-      <br>
-      The name is ....
-    </h5>    
+    <h5 id="h5message-success">
+      
+    </h5>
     <button id="continue" onclick="btnContinue()" class="btn-continue">
       Continue
     </button>
   </div>
-  <div id="message-error"  class="dialog error">
+  <div id="message-error" class="dialog error">
     <h5 id="error-title" class="error-title">
-    </h5>    
+    </h5>
     <button id="continue" onclick="btnContinue()" class="btn-continue">
       Continue
     </button>
   </div>
-
-  <script src="./js/index.js" ></script> 
+  <div id="message-finish" class="dialog info">
+    <h5 id="message-final">
+    </h5>
+  </div>
+  <script src="./js/index.js"></script>
 </body>
 
 </html>

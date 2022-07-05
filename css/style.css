@@ -147,7 +147,7 @@ h4 {
 /* Clase especifica para el div de exito*/
 .success{
   background-color: #2ecc71;  
-  opacity: 80%;  
+  color: white;  
   z-index: 6;
   display:none;     /*quitar la propiedad display:none; y mostrará el cuadro*/
 }
@@ -156,6 +156,15 @@ h4 {
   display: none;    /*quitar la propiedad display:none; y mostrará el cuadro*/
   background-color: red;
   opacity: 80%;
+}
+
+
+/* Clase especifica para el div de info*/
+.info{
+  background-color: #2e68cc;    
+  z-index: 6;
+  color: white;
+  display:none;     /*quitar la propiedad display:none; y mostrará el cuadro*/
 }
 
 .btn-continue{

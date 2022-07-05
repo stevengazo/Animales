@@ -57,7 +57,6 @@ const imgContainer = document.getElementById("imgContainer");
 /* Retorna un numero aleatorio con base en alguna longitud dada del arreglo */
 function randomNumber(numbero) {
   const numeroElegido = Math.floor(Math.random() * numbero) + 1;
-  console.log(`El numero aleatorio es ${numeroElegido}`);
   return numeroElegido;
 }
 
@@ -84,6 +83,9 @@ function validarNombre(boton) {
     player.points++;
     // muestra el cuadro de exito
     divFelicitaciones.style.display = "flex";
+    document.getElementById(
+      "h5message-success"
+    ).innerText = `Congratulations \n  the name of the animal is ${NombreImagenSeleccionada}`;
   } else {
     player.points--;
     /// muestra el cuadrito de error
@@ -118,14 +120,14 @@ function GenerarNombresBotones(correctAnswer) {
   } while (arrNamesOfAnimal.length < 4); // Sigue iterando hasta que el arreglo tenga 4 elementos
 
   // Inserta 4 elementos
-  for (let i = 0; i <= 3; i++) {
+  for (let i = 0; i < 4; i++) {
+    
     var tmpRandom = Math.floor(Math.random() * (arrNamesOfAnimal.length - 1)); // Genera un dato aleatorio
     var tmpValueToInser = arrNamesOfAnimal[tmpRandom]; // Setea un valor del arreglo como general
     if (arrNamesOfAnimal.length === 1) {
       tmpValueToInser = arrNamesOfAnimal[0];
-    }
-    const random = randomNumber(4);
-    debugger;
+    }    
+
     switch (i) {
       case 0:
         button1.innerText = tmpValueToInser;
@@ -177,16 +179,25 @@ function noneFunction() {}
 
 /// funcion para el boton continuar
 function btnContinue() {
-  cleanIMG();
-  //cleanIMG();
+  const messagefinaldiv = document.getElementById("message-finish");
+
+  if (counter < arrayOfimages.length) {
+    cleanIMG();
+
+    //cleanIMG();
+
+    button1.style.pointerEvents = "auto";
+    button2.style.pointerEvents = "auto";
+    button3.style.pointerEvents = "auto";
+    button4.style.pointerEvents = "auto";
+    RenderizarIMG();
+  } else {
+    messagefinaldiv.style.display = "flex";
+    var h5tag = document.getElementById("message-final");
+    h5tag.innerText = `Hey!!\n ${player.name} your highscore is ${player.points}`;
+  }
   divFelicitaciones.style.display = "none";
   divError.style.display = "none";
-
-  button1.style.pointerEvents = "auto";
-  button2.style.pointerEvents = "auto";
-  button3.style.pointerEvents = "auto";
-  button4.style.pointerEvents = "auto";
-  RenderizarIMG();
 }
 
 // Borra las imagenes del sitio
